@@ -1,0 +1,125 @@
+site_name: Alek Kwek's Notes
+site_url: https://alekkwek18.github.io/notes/
+copyright: Copyright by Alek 2024
+nav:
+  - Home: index.md
+  - Courses: 
+     #- Reflection: reflection.md
+     - CS2040S: 2040s.md
+     - CS2100: 2100.md
+
+    
+ 
+theme:
+  
+  custom_dir: docs/overrides
+
+  #favicon: material/water
+  icon:
+    #logo: material/water-alert
+    logo: material/water
+  name: material
+  features:
+    - navigation.instant
+    - navigation
+    - toc.follow
+    - toc.integrate
+    - content.code.annotate
+    - content.code.copy
+    - navigation.footer
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    #- navigation.tabs
+    
+    
+
+
+    
+  palette:
+    #scheme: slate
+    #primary: indigo
+    #accent: indigo
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+    
+  shortcuts:
+    previous: 72 #h
+    next: 76 #l
+    search: 160 #/
+
+plugins:
+    - mkdocs-video
+    - search
+    - glightbox
+    #- blog
+   
+
+    #- extra-sass
+
+extra:
+  generator: true
+
+extra_css:
+  - 'stylesheets/extra.css'
+  - 'https://fonts.googleapis.com/css?family=Roboto:400,700'
+  - 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
+
+markdown_extensions:
+  - md_in_html
+  - admonition
+  - attr_list
+  - pymdownx.highlight:
+     linenums: true
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.inlinehilite
+  - pymdownx.keys:
+      key_map: {
+        bang: "!",
+        dollar: "$",
+        parenthesis-left: "(",
+        parenthesis-right: ")",
+      }
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
